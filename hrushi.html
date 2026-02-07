@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting: Chennai ⮕ Pithapuram</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #ff0a54; --bg: #0d0d0f; --text: #e0e0e0; }
+        body, html { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+        /* Initial Screen */
+        #overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: black; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; transition: 1.5s ease-in-out;
+        }
+
+        .connect-btn {
+            padding: 15px 40px; background: transparent; border: 1px solid var(--accent);
+            color: var(--accent); font-family: 'Fira Code', monospace; cursor: pointer;
+            font-size: 1rem; letter-spacing: 2px; transition: 0.4s;
+        }
+        .connect-btn:hover { background: var(--accent); color: white; box-shadow: 0 0 30px var(--accent); }
+
+        /* Main Container */
+        .container { max-width: 700px; margin: 0 auto; padding: 60px 25px; opacity: 0; transition: 3s; }
+
+        .sys-log {
+            font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #666;
+            background: #16161a; padding: 20px; border-radius: 5px; margin-bottom: 40px;
+        }
+
+        .highlight { color: var(--accent); font-weight: 600; }
+
+        .letter-content { font-size: 1.15rem; line-height: 2; font-weight: 300; color: #ccc; }
+
+        /* Valentine Section */
+        .vday-card {
+            margin: 80px 0; padding: 60px 20px; text-align: center;
+            border: 1px dashed #444; border-radius: 20px;
+            cursor: pointer; transition: 0.3s;
+        }
+        .vday-card:hover { border-color: var(--accent); background: rgba(255,77,77,0.05); }
+        
+        .vday-card h1 { 
+            font-size: clamp(2rem, 10vw, 3rem); margin: 0; color: var(--accent);
+            text-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+        }
+        .click-hint { font-size: 0.7rem; color: #666; letter-spacing: 2px; margin-top: 10px; }
+
+        /* GIF Modal */
+        #gifModal {
+            display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+            background:rgba(0,0,0,0.95); z-index:1000; align-items:center; justify-content:center; flex-direction:column;
+        }
+        #gifModal img { max-width: 85%; border-radius: 10px; border: 2px solid var(--accent); }
+
+        /* Your Original Footer Styles */
+        .footer { text-align: center; margin-top: 100px; }
+        .wave {
+            display: inline-block; width: 3px; height: 20px;
+            background: var(--accent); margin: 0 2px;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce { from { height: 5px; } to { height: 25px; } }
+
+        /* Floating Hearts */
+        .heart {
+            position: fixed; color: var(--accent); font-size: 20px;
+            user-select: none; pointer-events: none; animation: float 4s linear infinite; opacity: 0;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="overlay">
+        <p style="font-family: 'Fira Code'; color: #444; margin-bottom: 20px;">// Establishing Secure Connection...</p>
+        <button class="connect-btn" onclick="startApp()">EXECUTE: AgarTumSaathHo.exe</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="gifModal">
+        <img src="pengu-pudgy.gif" alt="Cuto Penguins">
+        
+        <p style="color:white; margin-top:25px; font-family: 'Fira Code'; font-size: 1.1rem; text-align: center; padding: 0 20px; line-height: 1.5;">
+            Distance is just a variable. <br>
+            <span class="highlight">Love is a constant.</span>
+        </p>
+        
+        <button onclick="closeGif()" style="margin-top:20px; background:transparent; border:1px solid #ff4d4d; color:#ff4d4d; padding:8px 20px; cursor:pointer; font-family: 'Fira Code'; border-radius: 5px;">Close</button>
+    </div>
+    <div class="container" id="mainContent">
+        <div class="sys-log">
+            > SOURCE: CHENNAI<br>
+            > DESTINATION: PITHAPURAM<br>
+            > UPTIME: 07 MONTHS (210 DAYS)<br>
+            > ENCRYPTION: 100% SOUL_SYNC
+         </div>
+
+   <div class="letter-content">
+    <p>
+        Seven months of living in an <span class="highlight">asynchronous</span> world. <br><br>
+        210 days have passed <span class="highlight">since we last met</span>. While you're solving complex problems at Thoughtworks from your desk in Pithapuram, I’m here in Chennai, trying to navigate the silence you left behind.
+    </p>
+
+    <p>
+        Sometimes, when I call and the line just keeps ringing, a heavy silence fills my room. I know you're there, balancing life with parents and the pressure of work, but in those moments, the 630 kilometers feel like a thousand. My heart waits for your voice—a signal that sometimes doesn't come—and honestly... it hurts. 
+    </p>
+
+    <p>
+        Last year, you showed me a Ghibli fairytale. This year, I have no photos to display—just these raw, uncompiled feelings. Because how do I capture the way my heart skips a beat when you finally call back? How do I "code" the longing of seven months or the teardrops that fall when I miss you a little too much?
+    </p>
+
+    <p>
+        My gallery might be empty, but my cache is full of you. Every time <span class="highlight">Agar Tum Saath Ho</span> plays, the distance vanishes, the sadness fades, and for a few minutes, <span class="highlight">it feels like we are right next to each other again</span>.
+    </p>
+   </div>
+
+        <div class="vday-card" onclick="triggerCrazyEffect()">
+            <p style="letter-spacing: 5px; color: #888;">02 . 14 . 2026</p>
+            <h1>Happy Valentine's Day</h1>
+            <p class="highlight">HRUSHIKESH</p>
+            <div class="click-hint">(( CLICK TO DEPLOY LOVE ))</div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ in Chennai</p>
+            <div class="wave" style="animation-delay: 0.1s"></div>
+            <div class="wave" style="animation-delay: 0.2s"></div>
+            <div class="wave" style="animation-delay: 0.3s"></div>
+            <p>Connection remains encrypted & eternal.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        function startApp() {
+            document.getElementById('overlay').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('mainContent').style.opacity = '1';
+                createHearts();
+            }, 1000);
+
+            var audio = document.getElementById("bgMusic");
+            audio.play();
+        }
+
+        function createHearts() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }, 700);
+        }
+
+        function triggerCrazyEffect() {
+            var duration = 5 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1100 };
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
+                var particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random() - 0.2 } }));
+            }, 250);
+
+            setTimeout(() => {
+                document.getElementById('gifModal').style.display = 'flex';
+            }, 500);
+        }
+
+        function closeGif() {
+            document.getElementById('gifModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
